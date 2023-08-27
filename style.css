@@ -1,0 +1,245 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lunasima:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Lunasima', sans-serif;
+}
+
+.header{
+    width: 100%;
+    min-height: 130vh;
+    background-image: linear-gradient(to left, rgba(33, 32, 32, 0.58), rgba(52, 50, 50, 0.8)), url(./images/home/black-img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header .top-header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+    background: #100e1c;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.header .top-header .logo img {
+  width: 180px;
+  animation: moveLogo 4s ease-in-out infinite; 
+}
+
+@keyframes moveLogo {
+  0%, 100% {
+    transform: translateX(0); 
+  }
+  50% {
+    transform: translateX(30px); /
+  }
+}
+
+.header .top-header .navBar{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header .top-header .navBar a{
+    color: #fff;
+    font-size: 1rem;
+    margin: 0 1.4rem;
+    transition: 0.4s ease;
+}
+
+.header .top-header .navBar a.active,
+.header .top-header .navBar a:hover{
+    color: #f3a60d;
+}
+
+.header .top-header .others{
+    display: flex;
+    align-items: center;
+}
+
+.header .top-header .others a,
+.header .top-header .others span{
+    margin-right: 1.2rem;
+    color: #fff;
+    font-size: 1rem;
+    transition: 0.5s ease;
+}
+
+.header .top-header .others a:hover,
+.header .top-header .others span:hover,
+.header .top-header .others .search-box i:hover{
+    color: #f3a60d;
+}
+
+.header .top-header .others .search-box i{
+    color: #fff;
+    font-size: 1.2rem;
+    transition: 0.5s ease;
+}
+
+#search{
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    text-transform: lowercase;
+    margin-right: 0.5rem;
+    position: fixed;
+    right: 6rem;
+    top: 1.8rem;
+    display: none;
+}
+
+#search.active{
+    display: block;
+}
+
+.home {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 1rem 0;
+}
+
+.home .content{
+    flex: 1 1 10rem;
+    margin-bottom: 5rem;
+}
+
+.home .content h1{
+    color: #fff;
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    margin-bottom: 2rem;
+}
+
+.home .content h1 span{
+    color: #f3a60d;
+}
+
+.home .content p{
+    color: #fff;
+    margin-bottom: 3rem;
+    line-height: 1.5rem;
+}
+
+.btn{
+    padding: 1.6rem 3.7rem;
+    font-size: 1.2rem;
+    color: #100e1c;
+    background: #f3a60d;
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover{
+    background: #fff;
+}
+
+.image{
+    flex: 1 1 30rem;
+    margin-bottom: 3rem;
+}
+
+.image img{
+
+    object-fit: cover;
+    position: absolute;
+    right: -100%;
+    animation: slideImage 6s linear infinite;
+}
+
+@keyframes slideImage {
+  0%, 100% {
+      right: -100%;
+  }
+  25%, 75% {
+      right: 0; 
+  }
+}
+
+#menuBar{
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: 1.5rem;
+}
+
+#close {
+    display: none;
+}
+
+@media(max-width:1212px){
+    .header .top-header .navBar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0;
+        min-height: 100vh;
+        background: #100e1c;
+        display: block;
+        padding-top: 5rem;
+        overflow: hidden;
+        z-index: 100;
+        transition: 0.5s;
+    }
+
+    .header .top-header .navBar a{
+        display: block;
+        margin: 1.4rem 1.4rem;
+        transition: 0.4s ease;
+    }
+
+    #close{
+        display: block;
+        color: #fff;
+        position: absolute;
+        top: 2rem;
+        right: 1.7rem;
+        font-size: 2.2rem;
+    }
+
+    .header .top-header .navBar.active{
+        width: 250px;
+    }
+
+    .home .content{
+        margin-top: 2rem;
+    }
+
+    .home  .image img{
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+}
+
+@media(max-width:550px){
+    .home .image img{
+        margin-top: -3px;
+        height: 25rem;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .header .top-header .others span{
+        display: none;
+    }
+}
