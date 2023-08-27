@@ -1,5 +1,5 @@
 # 01_JsWithResponsive_FoodDelivery
-Font page design with HTML CSS and JavaScript with responsive design for major device's screen
+Font page design with HTML CSS and JavaScript with responsive design for major device's screen<br>
 
 # [Live Project Link](https://arshil121.github.io/01_JsWithResponsive_FoodDelivery/)
 # Desktop Design
