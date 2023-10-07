@@ -2,6 +2,10 @@
 
 Front page design with HTML, CSS, and JavaScript with responsive design for major devices' screens.
 
+## YouTube Video Source
+
+- [YouTube Video](https://www.youtube.com/watch?v=u_mz-fLoVt4&list=PLYj2E97STNAemYj7lls8XMQrcfQCx0UMZ&index=14)
+
 ## Live Project
 
 You can check out the live project [here](https://arshil121.github.io/01_JsWithResponsive_FoodDelivery/).
